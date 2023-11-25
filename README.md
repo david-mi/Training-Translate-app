@@ -1,0 +1,1 @@
+# Challenge from [devchallenges.io](https://devchallenges.io/challenge/47)

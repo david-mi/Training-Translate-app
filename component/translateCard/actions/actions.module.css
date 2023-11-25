@@ -1,0 +1,27 @@
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & button:not(button:nth-child(3)) {
+    width: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    border: 2px solid var(--clr-border);
+    background-color: transparent;
+    height: 35px;
+  }
+
+  & button:nth-child(3) {
+    margin-left: auto;
+    display: flex;
+    background-color: #3662E3;
+    border: 1px solid #7CA9F3;
+    gap: 5px;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--clr-text);
+    border-radius: 15px;
+  }
+}
