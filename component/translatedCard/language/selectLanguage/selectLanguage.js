@@ -2,8 +2,8 @@ import styles from "./selectLanguage.module.css";
 import { globalState } from "../../../../globalState.js";
 
 const languages = [
-  { name: "Français", iso: "fr" },
   { name: "Anglais", iso: "en" },
+  { name: "Français", iso: "fr" },
   { name: "Espagnol", iso: "es" },
   { name: "Allemand", iso: "de" },
   { name: "Italien", iso: "it" },
@@ -27,11 +27,11 @@ languages.forEach((language) => {
   selectMenu.append(optionElement);
 });
 
-globalState.chosenLanguageIso = selectMenu.value;
+globalState.targetLanguageIso = selectMenu.value;
 
 function selectLanguage(event) {
   const iso = event.target.value;
-  globalState.chosenLanguageIso = iso;
+  globalState.targetLanguageIso = iso;
 }
 
 selectMenu.addEventListener("click", selectLanguage);

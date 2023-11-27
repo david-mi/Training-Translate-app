@@ -27,7 +27,5 @@ counterElement.innerText = `0/500`;
 
 textEntryElement.append(textArea, counterElement);
 
-// idée de nathalie
-setTimeout(() => {
-  textArea.focus();
-});
+// focus textArea Element after it has been rendered in the DOM
+setTimeout(() => textArea.focus());

@@ -17,7 +17,13 @@ body {
 }
 
 main {
+  padding: 2rem;
   background: url("/hero_img.jpg") no-repeat;
   background-size: auto 100%;
-  width: 1280px;
+  /* width: 1280px; */
+  display: flex;
+  gap: 1rem;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

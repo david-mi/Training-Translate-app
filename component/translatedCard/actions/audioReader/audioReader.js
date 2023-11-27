@@ -10,7 +10,7 @@ audioReaderButton.append(imageElement);
 
 function readAudio() {
   const speech = new SpeechSynthesisUtterance();
-  speech.text = globalState.textToTranslate;
+  speech.text = globalState.translatedText;
 
   speechSynthesis.speak(speech);
 }

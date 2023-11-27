@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--clr-card);
+  height: 350px;
+  width: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: solid 1px var(--clr-border);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+}

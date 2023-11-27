@@ -3,6 +3,8 @@ import styles from "./translate.module.css";
 import translateSvgSrc from "/sort_alfa.svg";
 import { globalState } from "../../../../globalState.js";
 
+const addTranslatedTextEvent = new Event("addTranslatedText");
+
 const imageElement = document.createElement("img");
 imageElement.src = translateSvgSrc;
 
@@ -18,7 +20,7 @@ translateButton.append(
 async function handleTranslate() {
   const apiUrl = new URL("https://api.mymemory.translated.net/get");
   apiUrl.searchParams.append("q", globalState.textToTranslate);
-  apiUrl.searchParams.append("langpair", `${globalState.chosenLanguageIso}|${"en"}`);
+  apiUrl.searchParams.append("langpair", `${globalState.chosenLanguageIso}|${globalState.targetLanguageIso}`);
 
   const response = await fetch(apiUrl.href);
 
@@ -27,7 +29,8 @@ async function handleTranslate() {
       const data = await response.json();
 
       const translatedText = data.responseData.translatedText;
-      console.log(translatedText);
+      globalState.translatedText = translatedText;
+      dispatchEvent(addTranslatedTextEvent);
     }
   } catch (error) {
     console.error(error);

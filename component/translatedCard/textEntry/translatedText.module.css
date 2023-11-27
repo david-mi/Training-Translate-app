@@ -1,0 +1,9 @@
+.translatedText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  color: var(--clr-text);
+  font-weight: bold;
+  margin-top: 10px;
+}
