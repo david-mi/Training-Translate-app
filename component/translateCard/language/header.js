@@ -5,7 +5,7 @@ import { createSelectLanguageElement } from "../../selectLanguage/selectLanguage
 export const headerElement = document.createElement("header");
 headerElement.classList.add(styles.header);
 
-const selectLanguageElement = createSelectLanguageElement("translate");
+export const selectLanguageElement = createSelectLanguageElement("translate");
 
 headerElement.append(
   detectLanguageButton,

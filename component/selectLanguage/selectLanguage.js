@@ -1,6 +1,7 @@
 import styles from "./selectLanguage.module.css";
 import { globalState } from "../../globalState.js";
 import { handleTranslate } from "../translateCard/textEntry/textEntry.js";
+export const changeTargetLanguageEvent = new Event("choseTargetLanguage");
 
 const languages = [
   { name: "French", iso: "fr" },
@@ -37,6 +38,9 @@ export function createSelectLanguageElement(target) {
       selectLanguageElement.value = globalState.chosenLanguageIso;
     });
   } else {
+    window.addEventListener("choseTargetLanguage", () => {
+      selectLanguageElement.value = globalState.targetLanguageIso;
+    });
     selectLanguageElement.value = languages[1].iso;
     globalState.targetLanguageIso = selectLanguageElement.value;
   }

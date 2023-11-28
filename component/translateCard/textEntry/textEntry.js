@@ -6,7 +6,7 @@ const addTranslatedTextEvent = new Event("addTranslatedText");
 export const textEntryElement = document.createElement("div");
 textEntryElement.classList.add(styles.textEntry);
 
-const textArea = document.createElement("textarea");
+export const textArea = document.createElement("textarea");
 textArea.placeholder = "Write your text to translate";
 textArea.maxLength = 500;
 

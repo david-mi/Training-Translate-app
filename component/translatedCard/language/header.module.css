@@ -2,4 +2,6 @@
   padding-bottom: 1rem;
   position: relative;
   border-bottom: solid 1px var(--clr-border);
+  display: flex;
+  justify-content: space-between;
 }
