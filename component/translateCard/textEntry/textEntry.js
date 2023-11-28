@@ -41,7 +41,7 @@ textEntryElement.append(textArea, counterElement);
 // focus textArea Element after it has been rendered in the DOM
 setTimeout(() => textArea.focus());
 
-async function handleTranslate() {
+export async function handleTranslate() {
   const apiUrl = new URL("https://api.mymemory.translated.net/get");
   apiUrl.searchParams.append("q", globalState.textToTranslate);
   apiUrl.searchParams.append("langpair", `${globalState.chosenLanguageIso}|${globalState.targetLanguageIso}`);

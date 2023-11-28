@@ -1,5 +1,6 @@
 import styles from "./selectLanguage.module.css";
 import { globalState } from "../../globalState.js";
+import { handleTranslate } from "../translateCard/textEntry/textEntry.js";
 
 const languages = [
   { name: "French", iso: "fr" },
@@ -48,6 +49,8 @@ export function createSelectLanguageElement(target) {
     } else {
       globalState.targetLanguageIso = iso;
     }
+
+    handleTranslate();
   }
 
   selectLanguageElement.addEventListener("click", selectLanguage);
