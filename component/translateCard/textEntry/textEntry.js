@@ -17,7 +17,6 @@ function handleInput(event) {
   const textToTranslate = event.target.value;
   globalState.textToTranslate = textToTranslate;
 
-  console.log("input");
   debounceInput();
 }
 
@@ -51,8 +50,10 @@ export async function handleTranslate() {
   try {
     if (response.ok === true) {
       const data = await response.json();
+      const translatedText = data.quotaFinished === null
+        ? ""
+        : data.responseData.translatedText;
 
-      const translatedText = data.responseData.translatedText;
       globalState.translatedText = translatedText;
       dispatchEvent(addTranslatedTextEvent);
     }
