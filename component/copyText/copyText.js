@@ -10,13 +10,9 @@ export function createCopyButton(target) {
   copyTextButton.append(imageElement);
 
   async function handleCopy() {
-    let textToCopy = "";
-
-    if (target === "translate") {
-      textToCopy = globalState.textToTranslate;
-    } else {
-      textToCopy = globalState.translatedText;
-    }
+    const textToCopy = target === "translate"
+      ? globalState.textToTranslate
+      : globalState.translatedText;
 
     await navigator.clipboard.writeText(textToCopy);
   }
