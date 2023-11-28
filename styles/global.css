@@ -13,18 +13,27 @@
   height: 100dvh;
   font-family: 'DM Sans', sans-serif;
   background-color: black;
+  padding: clamp(0.5rem, 1vw, 2rem);
+  background: url("/hero_img.jpg") no-repeat center;
+  background-color: #040711;
+
+  @media (width < 1000px) {
+    background-size: cover;
+  }
 }
 
 main {
   max-width: 1280px;
-  height: 724px;
   width: 100%;
-  padding: clamp(0.5rem, 1vw, 2rem);
-  background: url("/hero_img.jpg") repeat-x;
-  background-color: #040711;
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: var(--gap);
+  height: 310px;
+
+  @media (width < 1000px) {
+    flex-direction: column;
+    height: 100%;
+  }
 }
