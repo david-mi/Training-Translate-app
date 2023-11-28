@@ -1,5 +1,3 @@
-import styles from "./translate.module.css";
-
 import translateSvgSrc from "/sort_alfa.svg";
 import { globalState } from "../../../../globalState.js";
 

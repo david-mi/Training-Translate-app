@@ -1,4 +1,3 @@
-import styles from "./readAudio.module.css";
 import { globalState } from "../../globalState.js";
 import audioSvgSrc from "/sound_max_fill.svg";
 

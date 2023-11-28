@@ -1,4 +1,3 @@
-import styles from "./copyText.module.css";
 import { globalState } from "../../globalState.js";
 import copySvgSrc from "/copy.svg";
 
