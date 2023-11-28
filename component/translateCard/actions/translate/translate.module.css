@@ -1,0 +1,18 @@
+.translateButton {
+  margin-left: auto;
+  display: flex;
+  background-color: #3662E3;
+  border: 2px solid #7CA9F3;
+  gap: 5px;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--clr-text);
+  border-radius: 15px;
+  transition: 300ms;
+  width: auto;
+  height: auto;
+
+  &:hover {
+    background-color: #7CA9F3;
+  }
+}

@@ -1,12 +1,9 @@
 import { globalState } from "../../globalState.js";
+import { createButton } from "../button/button.js";
 import audioSvgSrc from "/sound_max_fill.svg";
 
 export function createReadAudioButton(target) {
-  const imageElement = document.createElement("img");
-  imageElement.src = audioSvgSrc;
-
-  const readAudioButton = document.createElement("button");
-  readAudioButton.append(imageElement);
+  const readAudioButton = createButton(audioSvgSrc);
 
   function readAudio() {
     const speech = new SpeechSynthesisUtterance();

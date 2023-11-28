@@ -1,12 +1,9 @@
 import { globalState } from "../../globalState.js";
 import copySvgSrc from "/copy.svg";
+import { createButton } from "../button/button.js";
 
 export function createCopyButton(target) {
-  const imageElement = document.createElement("img");
-  imageElement.src = copySvgSrc;
-
-  const copyTextButton = document.createElement("button");
-  copyTextButton.append(imageElement);
+  const copyTextButton = createButton(copySvgSrc);
 
   async function handleCopy() {
     const textToCopy = target === "translate"
@@ -20,6 +17,3 @@ export function createCopyButton(target) {
 
   return copyTextButton;
 }
-
-
-
