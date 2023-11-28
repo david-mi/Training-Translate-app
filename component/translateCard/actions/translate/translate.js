@@ -24,6 +24,8 @@ async function handleTranslate() {
 
   const response = await fetch(apiUrl.href);
 
+  console.log(globalState);
+
   try {
     if (response.ok === true) {
       const data = await response.json();
