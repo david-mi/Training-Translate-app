@@ -1,12 +1,14 @@
 import styles from "./button.module.css";
 
 export function createButton(svgSrc, textContent) {
-  const imageSvg = document.createElement("img");
-  imageSvg.src = svgSrc;
-
   const button = document.createElement("button");
   button.classList.add(styles.button);
-  button.append(imageSvg);
+
+  if (svgSrc !== null) {
+    const imageSvg = document.createElement("img");
+    imageSvg.src = svgSrc;
+    button.append(imageSvg);
+  }
 
   if (textContent) {
     const spanElement = document.createElement("span");

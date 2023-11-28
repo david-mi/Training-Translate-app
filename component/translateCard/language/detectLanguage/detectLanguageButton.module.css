@@ -1,0 +1,6 @@
+.detectLanguageButton {
+  width: auto;
+  padding-inline: 0.5rem;
+  color: var(--clr-border);
+  border: none;
+}

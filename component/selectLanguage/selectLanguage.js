@@ -31,6 +31,10 @@ export function createSelectLanguageElement(target) {
   if (target === "translate") {
     selectLanguageElement.value = languages[0].iso;
     globalState.chosenLanguageIso = selectLanguageElement.value;
+
+    window.addEventListener("choseLanguage", () => {
+      selectLanguageElement.value = globalState.chosenLanguageIso;
+    });
   } else {
     selectLanguageElement.value = languages[1].iso;
     globalState.targetLanguageIso = selectLanguageElement.value;
