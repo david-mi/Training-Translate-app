@@ -2,18 +2,18 @@ import styles from "./selectLanguage.module.css";
 import { globalState } from "../../globalState.js";
 
 const languages = [
-  { name: "Français", iso: "fr" },
-  { name: "Anglais", iso: "en" },
-  { name: "Espagnol", iso: "es" },
-  { name: "Allemand", iso: "de" },
-  { name: "Italien", iso: "it" },
-  { name: "Portugais", iso: "pt" },
-  { name: "Néerlandais", iso: "nl" },
-  { name: "Suédois", iso: "sv" },
-  { name: "Norvégien", iso: "no" },
-  { name: "Danois", iso: "da" },
-  { name: "Finnois", iso: "fi" },
-  { name: "Grec", iso: "el" }
+  { name: "French", iso: "fr" },
+  { name: "English", iso: "en" },
+  { name: "Spanish", iso: "es" },
+  { name: "German", iso: "de" },
+  { name: "Italian", iso: "it" },
+  { name: "Portuguese", iso: "pt" },
+  { name: "Dutch", iso: "nl" },
+  { name: "Swedish", iso: "sv" },
+  { name: "Norwegian", iso: "no" },
+  { name: "Danish", iso: "da" },
+  { name: "Finnish", iso: "fi" },
+  { name: "Greek", iso: "el" }
 ];
 
 export function createSelectLanguageElement(target) {

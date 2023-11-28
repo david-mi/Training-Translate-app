@@ -5,7 +5,7 @@ export const textEntryElement = document.createElement("div");
 textEntryElement.classList.add(styles.textEntry);
 
 const textArea = document.createElement("textarea");
-textArea.placeholder = "Votre texte";
+textArea.placeholder = "Write your text to translate";
 textArea.maxLength = 500;
 
 function handleBlur(event) {
